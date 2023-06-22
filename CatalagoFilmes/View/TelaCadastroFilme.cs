@@ -32,7 +32,7 @@ namespace CatalagoFilmes.View
 
         public void novoCadastroFilme()
         {
-            this.Show();
+            this.Close();
         }
     }
 }
