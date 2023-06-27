@@ -33,10 +33,15 @@ namespace CatalagoFilmes.Controller
                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (resposta == DialogResult.Yes)
                 {
-                    MessageBox.Show("DEUUCERTO");
+                    Serie.NomeSerie = string.Empty;
+                    Serie.EstreiaSerie = string.Empty;
+                    Serie.CategoriaSerie = string.Empty;
+                    Serie.TemporadasSerie = string.Empty;
+                    Serie.RetornoSerie = string.Empty;
                 }
                 else
                 {
+                    Serie.RetornoSerie = "f";
                     return;
                 }
             }

@@ -28,9 +28,14 @@ namespace CatalagoFilmes.View
             
             SerieController serie = new SerieController();
             serie.CadastrarSerie();
+
+            if(Serie.RetornoSerie == "f")
+            {
+                this.Close();
+            }
         }
 
-        public void novoCadastroSerie()
+        public void FecharTela()
         {
             this.Close();
         }

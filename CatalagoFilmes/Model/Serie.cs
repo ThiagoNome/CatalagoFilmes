@@ -13,11 +13,13 @@ namespace CatalagoFilmes.Model
         private static string estreiaSerie;
         private static string categoriaSerie;
         private static string temporadasSerie;
+        private static string retornoSerie;
 
         public static int Id { get => id; set => id = value; }
         public static string NomeSerie { get => nomeSerie; set => nomeSerie = value; }
         public static string EstreiaSerie { get => estreiaSerie; set => estreiaSerie = value; }
         public static string CategoriaSerie { get => categoriaSerie; set => categoriaSerie = value; }
         public static string TemporadasSerie { get => temporadasSerie; set => temporadasSerie = value; }
+        public static string RetornoSerie { get => retornoSerie; set => retornoSerie = value; }
     }
 }

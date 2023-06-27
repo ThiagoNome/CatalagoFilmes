@@ -34,11 +34,15 @@ namespace CatalagoFilmes.Controller
                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if(resposta == DialogResult.Yes)
                 {
-                    TelaCadastroFilme TelaFilme = new TelaCadastroFilme();
-                    TelaFilme.Show();
+                    Filme.NomeFilme = string.Empty;
+                    Filme.EstreiaFilme = string.Empty;
+                    Filme.DuracaoFilme = string.Empty;
+                    Filme.CategoriaFilme = string.Empty;
+                    Filme.Retornofilme = string.Empty;
                 }
                 else
                 {
+                    Filme.Retornofilme = "f";
                     return;
                 }
 
