@@ -13,8 +13,9 @@ namespace CatalagoFilmes.Controller
     {
         public void CadastrarSerie()
         {
-            SqlConnection cn = new SqlConnection(ConexaoSerie.ConectarSerie());
+            SqlConnection cn = new SqlConnection(Conexao.Conectar());
             SqlCommand cmd = new SqlCommand("InserirSerieP", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
             try
             {
@@ -23,13 +24,21 @@ namespace CatalagoFilmes.Controller
                 cmd.Parameters.AddWithValue("@categoria", Serie.CategoriaSerie);
                 cmd.Parameters.AddWithValue("@temporadas", Serie.TemporadasSerie);
 
-                SqlParameter nv = cmd.Parameters.Add("@Id", SqlDbType.Int);
+                SqlParameter nv = cmd.Parameters.Add("@id", SqlDbType.Int);
                 nv.Direction = ParameterDirection.Output;
                 cn.Open();
                 cmd.ExecuteNonQuery();
 
-                var resposta = MessageBox.Show("")
-
+                var resposta = MessageBox.Show("Série Cadastrado com Sucesso, " + "Deseja Cadastrar outro Filme?", "Novo Registro",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (resposta == DialogResult.Yes)
+                {
+                    MessageBox.Show("DEUUCERTO");
+                }
+                else
+                {
+                    return;
+                }
             }
             catch (Exception)
             {
