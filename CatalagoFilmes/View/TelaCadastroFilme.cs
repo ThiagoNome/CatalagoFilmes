@@ -28,9 +28,14 @@ namespace CatalagoFilmes.View
 
             FilmeController filme = new FilmeController();
             filme.CadastrarFilme();
+
+            if (Filme.Retornofilme == "f")
+            {
+                this.Close();
+            }
         }
 
-        public void novoCadastroFilme()
+        public void FecharTela()
         {
             this.Close();
         }
