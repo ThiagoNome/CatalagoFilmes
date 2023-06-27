@@ -12,27 +12,28 @@ using System.Windows.Forms;
 
 namespace CatalagoFilmes.View
 {
-    public partial class TelaCadastroFilme : Form
+    public partial class TelaCadastroSerie : Form
     {
-        public TelaCadastroFilme()
+        public TelaCadastroSerie()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Filme.NomeFilme = txBoxFilme.Text;
-            Filme.DuracaoFilme = txBoxDuracao.Text;
-            Filme.EstreiaFilme = txBoxEstreia.Text;
-            Filme.CategoriaFilme = cBoxCategoria.Text;
-
-            FilmeController filme = new FilmeController();
-            filme.CadastrarFilme();
+            Serie.NomeSerie = txBoxSerie.Text;
+            Serie.CategoriaSerie = cBoxCategoria.Text;
+            Serie.EstreiaSerie = txBoxEstreia.Text;
+            Serie.TemporadasSerie = txBoxTemporadas.Text;
+            
+            SerieController serie = new SerieController();
+            serie.CadastrarSerie();
         }
 
-        public void novoCadastroFilme()
+        public void novoCadastroSerie()
         {
             this.Close();
         }
+
     }
 }

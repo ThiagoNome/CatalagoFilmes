@@ -16,5 +16,17 @@ namespace CatalagoFilmes.View
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaCadastroSerie serie1 = new TelaCadastroSerie();
+            serie1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaCadastroFilme filme1 = new TelaCadastroFilme();
+            filme1.Show();
+        }
     }
 }
